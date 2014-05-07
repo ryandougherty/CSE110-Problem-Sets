@@ -1,0 +1,167 @@
+\documentclass{article}
+
+\usepackage [margin=1in]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{listings}
+\lstset{language=Java,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{ForestGreen}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#}}
+\usepackage [autostyle]{csquotes}
+\usepackage [english]{babel}
+\usepackage {verbatim}
+
+\title{CSE110 Review Questions (Solutions)}
+\author{Prepared by Ryan Dougherty}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Introduction to Classes}
+
+\newcounter{question_num}
+
+\setcounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Which of the following enforces Encapsulation?
+\newline a) Make instance variables private
+\newline b) Make methods public
+\newline c) Make the class final
+\newline d) Both a and b
+\newline e) All of the above
+\newline {\color{red}Answer: D}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Use the following class to answer the questions below:
+\begin{lstlisting}
+public class Store {
+	private int quantity;
+	private double price;
+
+	public Store(int q, double p) {
+		quantity = q;
+		price = p;
+	}
+
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setPrice(double p) {
+		price = p;
+	}
+
+	public double calcTotal() {
+		return price * quantity;
+	}
+}
+\end{lstlisting}
+a) What is the name of the class? {\color{red}Store}
+\newline b) List all instance variables of the class. {\color{red}quantity, price}
+\newline c) List all methods of the class. {\color{red}Store(int, double), getQuantity(), setPrice(double), calcTotal()}
+\newline d) List all mutators in the class. {\color{red}setPrice(double)}
+\newline e) List all accessors in the class. {\color{red}getQuantity()}
+\newline f) List which method is the constructor. {\color{red}Store(int, double)}
+\newline g) Write a mutator for the quantity.
+\newline{\color{red}Answer:}
+\begin{lstlisting}
+public void setQuantity(int q) {
+	quantity = q;
+}
+\end{lstlisting}
+
+h) Write an accessor for the price.
+\newline{\color{red}Answer:}
+\begin{lstlisting}
+public double getPrice() {
+	return price;
+}
+\end{lstlisting}
+
+i) Write a line of code that will create an instance called videoStore that has quantity 100 and a price of 5.99.
+\newline{\color{red}Answer:}
+\begin{lstlisting}
+Store videoStore = new Store(100, 5.99);
+\end{lstlisting}
+
+j) Call the calcTotal method with the videoStore object (from part i) to print out the total.
+\newline{\color{red}Answer:}
+\begin{lstlisting}
+System.out.println("Total: " + videoStore.calcTotal());
+\end{lstlisting}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+True or False? If no constructor is provided, then Java automatically provides a default constructor. {\color{red} Answer: True. Java will automatically provide a default constructor if none is given. However, if any other constructor is given, the default constructor can no longer be used.}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+True or False? A method must have at least 1 return statement. {\color{red} Answer: False. Any method with return type void is not required to have a return statement. However, if it does have a return statement, it must not have a value associated with it (i.e. "return 5;" is not allowed for void methods, but "return;" is.).}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Correct the following class definition if you think it will not work:
+\begin{lstlisting}
+public class Student {
+	private String name, major;
+
+	public Student() {
+		name = "???";
+		major = "xxx";
+	}
+
+	public Student(String n, String m) {
+		n = name;
+		m = major;
+	}
+
+	public String getMajor() {
+		return m;
+	}
+
+	public String getName() {
+		return n;
+	}
+}
+\end{lstlisting}
+{\color{red}Answer: There are problems in the assignment in the constructor, "n = name" and "m = major" should be the other way around. Also, the "return m" in getMajor and "return n" in getName need to be "return major" and "return name", respectively.}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Implement a class called AsuStudent. The class should keep track of the student's name, number of classes registered, hours spent per week for a class (consider a student devotes the same amount of time for each of his/her classes per week). Implement a toString method to show the name and number of classes registered by a student, a getName method to return the name of the student, a getTotalHours method to return the total number of hours per week, and a setHours method to set the number of hours the student devotes for each class.
+ {\color{red} \newline Answer:}
+\begin{lstlisting}
+public class AsuStudent {
+	private String sName;
+	private int classNum, hrPerWeek;
+	
+	public AsuStudent(String name, int class, int hr) {
+		sName = name;
+		classNum = class;
+		hrPerWeek = hr;
+	}
+
+	public String toString() {
+		return sName + " " + classNum + " " + hrPerWeek;
+	}
+
+	public String getName() {
+		return sName;
+	}
+
+	public int getTotalHours() {
+		return classNum * hrPerWeek;
+	}
+
+	public void setHours(int time) {
+		hrPerWeek = time;
+	}
+}
+\end{lstlisting}
+
+\end{document}

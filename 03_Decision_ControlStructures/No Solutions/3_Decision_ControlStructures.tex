@@ -1,0 +1,93 @@
+\documentclass{article}
+
+\usepackage [margin=1in]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{listings}
+\lstset{language=Java,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{ForestGreen}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#}}
+\usepackage [autostyle]{csquotes}
+\usepackage [english]{babel}
+\usepackage {verbatim}
+
+\title{CSE110 Review Questions}
+\author{Prepared by Ryan Dougherty}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Decision - Control Structures}
+
+\newcounter{question_num}
+
+\setcounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+What is the output of the following code?
+\begin{lstlisting}
+int depth = 8;
+if (depth >= 8) {
+	System.out.print("Danger: ");
+	System.out.print("deep water. ");
+}
+System.out.println("No swimming allowed.");
+\end{lstlisting}
+
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+What is the output of the following code?
+\begin{lstlisting}
+int depth = 12;
+int temp = 42;
+System.out.print("The water is: ");
+if (depth >= 8)
+	System.out.print("deep ");
+if (temp <= 50 && depth <= 12)
+	System.out.print("cold ");
+System.out.println(" wet.");
+\end{lstlisting}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Consider the following code:
+\begin{lstlisting}
+String str1 = "Java is fun";
+String str2 = "Java is fun";
+if ( /* */ )
+	System.out.println("String1 and String2 are the same");
+else
+	System.out.println("String1 and String2 are different");
+\end{lstlisting}
+Fill in the missing condition to check if str1 and str2 are the same.
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+If k holds a value of the type int, then the value of the expression:
+\begin{lstlisting}
+k <= 10 || k > 10
+\end{lstlisting}
+a) must be true
+\newline b) must be false
+\newline c) could be either true or false
+\newline d) is a value of type int
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write a program that asks for 3 integers and prints the median value of the three integers.
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Evaluate the following expressions, assuming that x = -2 and y = 3.
+\begin{lstlisting} 
+a) x <= y 
+b) (x < 0) || (y < 0)
+c) (x <= y) && (x < 0)
+d) ((x + y) > 0) && !(y > 0)
+\end{lstlisting}
+
+\end{document}

@@ -1,0 +1,177 @@
+\documentclass{article}
+
+\usepackage [margin=1in]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{listings}
+\lstset{language=Java,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{ForestGreen}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#}}
+\usepackage [autostyle]{csquotes}
+\usepackage [english]{babel}
+\usepackage {verbatim}
+
+\title{CSE110 Review Questions (Solutions)}
+\author{Prepared by Ryan Dougherty}
+\date{}
+
+\begin{document}
+\maketitle
+
+\newcounter{question_num}
+\setcounter{question_num}{1}
+
+\section{Data Types}
+
+\setcounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Give the output of the following program:
+\begin{lstlisting}
+public class Example {
+	public static void main(String[] args) {
+		int y = 2, z = 1;
+		z = y * 2;
+		System.out.print(y + z);
+	}
+}
+\end{lstlisting}
+{\color{red}Answer: 6. This is because y is 2, and 2*2 is stored in z. Now, z=4, and y is the same value (2). Therefore, 4+2 = 6.}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Consider the following program:
+\begin{lstlisting}
+public class Example {
+	public static void main(String[] args) {
+		String str = new String("Arizona state university");
+		char ch1 = str.toLowerCase().toUpperCase().charAt(0);
+		char ch2 = str.toUpperCase().charAt(8);
+		char ch3 = str.toUpperCase().charAt(str.length() - 1);
+		System.out.println("character 1 is: " + ch1);
+		System.out.println("character 2 is: " + ch2);
+		System.out.println("character 3 is: " + ch3);
+	}
+}
+\end{lstlisting}
+What will be the output?
+\newline
+{\color{red}character 1 is: A
+\newline character 2 is: S
+\newline character 3 is: Y}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Consider the following program:
+\begin{lstlisting}
+public class Example {
+	public static void main(String[] args) {
+		int num1 = 4, num2 = 5;
+		System.out.println("4" + "5");
+		System.out.println(num1 + num2);
+		System.out.println("num1" + "num2");
+		System.out.println(4+5);
+	}
+}
+\end{lstlisting}
+What will be the output?
+\newline
+{\color{red}Answer:
+\newline 45
+\newline 9
+\newline num1num2
+\newline 9}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Which of the following invokes the method length() of the object str and stores the result in val of type int?
+\begin{lstlisting}
+a) int val = str.length();
+b) int val = length.str();
+c) int val = length().str;
+d) int val = length(str);
+\end{lstlisting}
+{\color{red}Answer: A}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Evaluate each of the following expressions.
+\begin{lstlisting}
+String s = "Programming is Fun";
+String t = "Workshop is cool";
+a) System.out.println(s.charAt(0) + t.substring(3, 4));
+b) System.out.println(t.substring(7));
+\end{lstlisting}
+{\color{red}Answers:
+\newline a) Pk
+\newline b) p is cool}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Evaluate each of the following expressions.
+\begin{lstlisting}
+int j = 11;
+int k = 3;
+String s = "Ford Rivers";
+a) j / k
+b) j \% k
+c) s.substring(1, 5)
+d) s.length()
+e) s.charAt(3)
+\end{lstlisting}
+{\color{red}Answers:
+\newline a) 3
+\newline b) 2
+\newline c) ord
+\newline d) 11
+\newline e) d
+}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+True or False? The type char is a primitive data type.
+{\color{red}Answer: True}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+True or False? The type String is a primitive data type.
+{\color{red}Answer: False}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write a Java program that asks the user for the radius of a circle and finds the area of the circle.
+\newline {\color{red}Answer:}
+\begin{lstlisting}
+import java.util.Scanner;
+public class Circle {
+	public static void main(String[] args) {
+		final double PI = 3.14159;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter radius: ");
+		double radius = scan.nextDouble();
+		double area = PI * radius * radius;
+		System.out.println("The area is: " + area);
+	}
+}
+\end{lstlisting}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write a Java program that prompts the user to enter 2 integers. Print the smaller of the 2 integers.
+\newline {\color{red}Answer:}
+\begin{lstlisting}
+import java.util.Scanner;
+public class Smaller {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter 2 integers:");
+		int a = scan.nextInt();
+		int b = scan.nextInt();
+		System.out.println("The smaller integer is " + Math.min(a, b));
+	}
+}
+\end{lstlisting}
+
+\end{document}

@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\usepackage [margin=1in]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{listings}
+\lstset{language=Java,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{ForestGreen}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#}}
+\usepackage [autostyle]{csquotes}
+\usepackage [english]{babel}
+\usepackage {verbatim}
+
+\title{CSE110 Review Questions (Solutions)}
+\author{Prepared by Ryan Dougherty}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Static Variables and Methods}
+
+\newcounter{question_num}
+
+\setcounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+What is a static variable? What is a static method?
+\newline {\color{red}Answer: A static variable is shared among all instances of a class. A static method is invoked using the class name.}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Using the code below, how many copies of the variable number exist after instantiating 374 different AmazingClass objects?
+\begin{lstlisting}
+public class AmazingClass {
+	private static int number;
+
+	public AmazingClass(int a) {
+		number = a;
+	}
+
+	public int twice() {
+		number *= 2;
+		return number;
+	}
+}
+\end{lstlisting}
+{\color{red}Answer: 1}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Using the code from above, what is the value of number after each of the following statements? (For each part, assume the preceding parts have already been executed).
+\begin{lstlisting}
+AmazingClass ac1 = new AmazingClass(3); 
+AmazingClass ac2 = new AmazingClass(7);
+ac1.twice();
+ac2.twice();
+\end{lstlisting}
+{\color{red}Answers:
+\newline 3
+\newline 7
+\newline 14
+\newline 28
+}
+
+\end{document}

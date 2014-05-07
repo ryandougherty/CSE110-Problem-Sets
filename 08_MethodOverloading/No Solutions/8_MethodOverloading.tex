@@ -1,0 +1,43 @@
+\documentclass{article}
+
+\usepackage [margin=1in]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{listings}
+\lstset{language=Java,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{ForestGreen}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#}}
+\usepackage [autostyle]{csquotes}
+\usepackage [english]{babel}
+\usepackage {verbatim}
+
+\title{CSE110 Review Questions}
+\author{Prepared by Ryan Dougherty}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Method Overloading}
+
+\newcounter{question_num}
+
+\setcounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+What is method overloading? 
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+What are the valid method headings assuming they are written in the same class?
+\begin{lstlisting}
+a) public void Void()
+b) public double void f2()
+c) public double sum(int left, right)
+d) public String string(int n)
+e) public BankAccount bankAccount()
+\end{lstlisting}
+
+\end{document}
