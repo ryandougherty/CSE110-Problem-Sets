@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\usepackage [margin=1in]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{listings}
+\lstset{language=Java,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{ForestGreen}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#}}
+\usepackage [autostyle]{csquotes}
+\usepackage [english]{babel}
+\usepackage {verbatim}
+
+\title{CSE110 Review Questions (Solutions)}
+\author{Prepared by Ryan Dougherty}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Sorting}
+
+\newcounter{question_num}
+
+\setcounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write the contents after each step of selection sort and insertion sort (assume by alphabetical order).
+\begin{table}[h]
+\begin{tabular}{lllllll}
+Mike & Betsy & Aaron & Steven & Doug & Pat & Elise
+\end{tabular}
+\end{table}
+ \newline {\color{red}Answers:
+\newline Selection Sort:
+\newline Original: M B A S D P E
+\newline Pass 1: A B M S D P E
+\newline Pass 2: A B M S D P E
+\newline Pass 3: A B D S M P E
+\newline Pass 4: A B D E M P S
+\newline Pass 5: A B D E M P S
+\newline Pass 6: A B D E M P S
+
+Insertion Sort:
+\newline Original: M B A S D P E
+\newline Pass 1: B M A S D P E
+\newline Pass 2: A B M S D P E
+\newline Pass 3: A B M S D P E
+\newline Pass 4: A B D M S P E
+\newline Pass 5: A B D M P S E
+\newline Pass 6: A B D E M P S
+}
+
+\end{document}

@@ -1,0 +1,37 @@
+\documentclass{article}
+
+\usepackage [margin=1in]{geometry}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{listings}
+\lstset{language=Java,
+	basicstyle=\ttfamily,
+	keywordstyle=\color{blue}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	showstringspaces=false,
+	commentstyle=\color{ForestGreen}\ttfamily,
+	morecomment=[l][\color{magenta}]{\#}}
+\usepackage [autostyle]{csquotes}
+\usepackage [english]{babel}
+\usepackage {verbatim}
+
+\title{CSE110 Review Questions}
+\author{Prepared by Ryan Dougherty}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Searching}
+
+\newcounter{question_num}
+
+\setcounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Use the sorted list below and use binary search to look for Mike in the list. Show all the names that will be compared before Mike is found. Then, repeat the same process for Cathy (note: Cathy is not in the list).
+\begin{table}[h]
+\begin{tabular}{lllllll}
+Aaron & Betsy & Doug & Elise & Mike & Pat & Steven
+\end{tabular}
+\end{table}
+
+\end{document}
