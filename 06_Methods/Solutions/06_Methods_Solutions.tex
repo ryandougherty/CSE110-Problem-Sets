@@ -39,4 +39,21 @@ public boolean allDifferent(int num1, int num2, int num3) {
 }
 \end{lstlisting}
 
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write a boolean method called isPrime that takes in an int number, and returns true if the number is prime, and false otherwise.
+\newline {\color{red}Answer:}
+\begin{lstlisting}
+public boolean isPrime(int n) {
+	// Question: how can we improve the performance of this loop? 
+	// (Hint: what is the max number relative to n that can divide into n?)
+	for (int i = 2; i < n; i++) {
+		if (n % i == 0) {
+			return false;
+		}
+	}
+	return true;
+}
+\end{lstlisting}
+
 \end{document}
