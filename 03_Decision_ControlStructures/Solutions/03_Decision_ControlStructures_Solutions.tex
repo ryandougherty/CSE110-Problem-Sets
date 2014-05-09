@@ -124,4 +124,96 @@ d) ((x + y) > 0) && !(y > 0)
 \newline c) true
 \newline d) false}
 
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write the output of the following code:
+\begin{lstlisting}
+int grade = 45;
+if (grade >= 70)
+	System.out.println("passing");
+if (grade < 70)
+	System.out.println("dubious");
+if (grade < 60)
+	System.out.println("failing");
+\end{lstlisting}
+{\color{red}Answer:
+\newline dubious
+\newline failing
+}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write the output of the following code:
+\begin{lstlisting}
+String option = "A";
+if (option.equals("A"))
+	System.out.println("addRecord");
+if (option.compareTo("A") == 0)
+	System.out.println("deleteRecord");
+\end{lstlisting}
+{\color{red}Answer:
+\newline addRecord
+\newline deleteRecord
+}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write the output of the following code:
+\begin{lstlisting}
+double x = -1.5;
+if (x < -1.0)
+	System.out.println("true");
+else
+	System.out.println("false");
+	System.out.println("after if...else");
+\end{lstlisting}
+{\color{red}Answer:
+\newline true
+\newline after if...else
+}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write the output of the following code:
+\begin{lstlisting}
+int j = 8;
+double x = -1.5;
+if (x >= j)
+	System.out.println("x is high");
+else
+	System.out.println("x is low");
+\end{lstlisting}
+{\color{red}Answer:
+\newline x is low
+}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write the output of the following code:
+\begin{lstlisting}
+double x = -1.5;
+if (x <= 0.0) {
+	if (x < 0.0)
+		System.out.println("neg");
+	else
+		System.out.println("zero");
+}
+else
+	System.out.println("pos");
+\end{lstlisting}
+{\color{red}Answer:
+\newline neg
+}
+
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write code that ensures that an int variable called number is an odd integer.
+{\color{red}Answer:}
+\begin{lstlisting}
+if ((number % 2) == 0)
+	number++;
+// number at this point will be guaranteed to be odd
+\end{lstlisting}
+
+
 \end{document}
