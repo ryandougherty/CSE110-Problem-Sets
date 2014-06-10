@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  10 MAY 2014 07:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  20 MAY 2014 18:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -249,13 +249,7 @@ Overfull \hbox (90.9439pt too wide) in paragraph at lines 81--82
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[2]
-Overfull \hbox (374.44334pt too wide) in paragraph at lines 172--173
-[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
-][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[3] (./06_Methods_Solutions.aux) ) 
+[2] [3] (./06_Methods_Solutions.aux) ) 
 Here is how much of TeX's memory you used:
  4338 strings out of 493315
  61417 string characters out of 6137904
@@ -264,12 +258,12 @@ Here is how much of TeX's memory you used:
  8063 words of font info for 29 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  30i,6n,40p,837b,1429s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmtt10.pfb>
-Output written on 06_Methods_Solutions.pdf (3 pages, 65204 bytes).
+</usr/local/texlive/2013/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmtt10.pfb>
+Output written on 06_Methods_Solutions.pdf (3 pages, 65199 bytes).
 PDF statistics:
  30 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
