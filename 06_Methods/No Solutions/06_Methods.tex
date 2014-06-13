@@ -55,7 +55,8 @@ public class Two {
 	}
 
 	public Two mystery(Two rhs) {
-		Two temp = new Two(getReal() + rhs.getReal(), getImag() + rhs.getImag());
+		Two temp = new Two(getReal() + rhs.getReal(), 
+			getImag() + rhs.getImag());
 		return temp;
 	}
 }
