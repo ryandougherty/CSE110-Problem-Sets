@@ -34,4 +34,66 @@ int[][] array = new int[6][8];
 int[][] array = new int[8][6]; // also acceptable
 \end{lstlisting}
 
+\addtocounter{question_num}{1}
+\paragraph{Question \arabic{question_num}}
+Write the output generated when the following program executes.
+\begin{lstlisting}
+public class TwoDArray {
+	public static void main(String[] args) {
+		int size = 4;
+    		int[][] t = new int[size][size];
+    		init(t, size);
+    		display(t, size);
+    		rearrange(t, size);
+    		display(t, size);
+  	}
+
+  	public static void display(int[][] t, int size) {
+    		System.out.println( "The 2D array" );
+    		for(int r = 0; r < size; r++) {
+			for(int c = 0; c < size; c++)
+				System.out.print(padWithBlanks(""+t[r][c], 4));
+      			System.out.println( );
+    		}
+  	}
+
+  	public static void init(int t[][], int size) {
+    		for(int r = 0; r < size; r++)
+      			for(int c = 0; c < size; c++)
+       				t[r][c] = (r+1)*(c+1);
+  	}
+
+  	public static String padWithBlanks(String numAsString, int width) {
+    		int blanksToPad = width - numAsString.length();
+    		for(int j = 1; j <= blanksToPad; j++)
+      			numAsString = " " + numAsString;
+    		return numAsString;
+  	}
+
+  	public static void rearrange(int t[][], int size) {
+    		for(int r = 0; r < size; r++) {
+      			int sum = 0;
+      			for(int c = 0; c < size; c++) {
+        				sum += t[r][c];
+        				t[r][c] = 0;
+      			}
+      			t[r][r] = sum;
+    		}
+  	}
+}
+\end{lstlisting}
+
+{\color{red}Answer: \\
+The 2D array \\
+   1   2   3   4\\
+   2   4   6   8\\
+   3   6   9  12\\
+   4   8  12  16\\
+The 2D array\\
+  10   0   0   0\\
+   0  20   0   0\\
+   0   0  30   0\\
+   0   0   0  40\\
+}
+
 \end{document}
