@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  10 MAY 2014 07:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  9 JUL 2014 13:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -242,25 +242,34 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 117.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 117.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 135.
 
-[2] (./09_Arrays_Solutions.aux) ) 
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 135.
+ [2] [3]
+(./09_Arrays_Solutions.aux) ) 
 Here is how much of TeX's memory you used:
- 4304 strings out of 493315
- 61015 string characters out of 6137904
- 149444 words of memory out of 5000000
- 7741 multiletter control sequences out of 15000+600000
+ 4329 strings out of 493315
+ 61396 string characters out of 6137904
+ 154444 words of memory out of 5000000
+ 7763 multiletter control sequences out of 15000+600000
  8063 words of font info for 29 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  30i,9n,40p,836b,939s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2013/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmtt10.pfb>
-Output written on 09_Arrays_Solutions.pdf (2 pages, 62555 bytes).
+</usr/local/texlive/2013/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmtt10.pfb>
+Output written on 09_Arrays_Solutions.pdf (3 pages, 73303 bytes).
 PDF statistics:
- 27 PDF objects out of 1000 (max. 8388607)
- 18 compressed objects within 1 object stream
+ 34 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
